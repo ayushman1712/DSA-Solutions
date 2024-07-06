@@ -1,0 +1,49 @@
+Question 1
+
+(a) Selection Sort
+
+Reasons:
+1. The question asks us to sort the given data strcuture DS1 "in-place"
+2. Merge Sort takes worst case O(n logn) time to sort a data structure of length n
+    but it requires additonal space, thus it is not "in-place".
+3. Both Insertion Sort and Selection Sort are "in-place" sorting algorithms.
+4. For this data-structure, both Insertion Sort would take: 
+        O(n^3 log(n)) - Worst Case Time Complexity
+            since it performs O(n^2) get_at_index() operations
+            and O(n^2) set_at_index() operations
+4. For this data-structure, both Selection Sort would take: 
+        O(n^2 log(n)) - Worst Case Time Complexity
+            since it performs O(n^2) get_at_index() operations
+            and O(n) set_at_index() operations
+5. Therefore, Selection Sort is the best choice.
+
+
+(b) Merge Sort
+
+Reasons:
+1. The fixed array contains references to 'n' comparable objects & each comparison 
+    takes O(log n) time.
+2. If we use Selection Sort or Insertion Sort, both of these use two loops along with
+    a third comparison statement
+3. Thus, asymptotic time complexity for Selection Sort and Insertion Sort would be 
+    O((n^2) logn).
+4. Whereas, the Merge Sort algorithm would take O(n ((logn)^2)).
+5. Because, the Merge Step in this case would take O(n logn) time, since there is a loop 
+    inside which comparisons are happening.
+6. Therefore, Merge Sort could be a good choice.
+
+
+
+(c) Insertion Sort
+
+Reasons:
+
+1. Insertion Sort takes O(n) time in best case, since its inner loop will 
+    break in almost constant time if the array is partially sorted, it is 
+    thus effective for nearly sorted arrays and small datasets.
+2. Insertion sort has a time complexity of O(n) [ O(n + log(log(n)))], 
+    where (log(log(n))) is the number of inversions or swaps.
+3. Selection sort and merge sort, do not depend on the input size and have 
+    asymptotic time complexities of O(n^2) and O(n log(n)) respectively.
+4. Therefore, for the scenario of a nearly sorted array with a few swaps, 
+    insertion sort would be the most suitable choice to re-sort.
